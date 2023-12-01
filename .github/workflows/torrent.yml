@@ -36,7 +36,7 @@ jobs:
           diskperf -Y >nul
           sc config Audiosrv start= auto >nul
           sc start audiosrv >nul
-          ICACLS C:\Windows\Temp /grant administrator:F >nul
+          ICACLS C:\Windows\Temp /grant runneradmin:F >nul
         
       - name: Get Ngrok 
         run: Invoke-WebRequest http://localhost:4040/api/tunnels
